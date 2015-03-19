@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node app.js"
   },
+
   "repository": {
     "type": "git",
     "url": "https://github.com/punkave/apostrophe-sandbox"
@@ -26,5 +27,8 @@
     "apostrophe-snippets": "^0.5.79",
     "apostrophe-ui-2": "0.5.x",
     "optimist": "~0.6.0"
+  },
+  "engines": {
+    "node": "0.10.x"
   }
 }
