@@ -11,7 +11,7 @@
     {% endif %}
     {# For the public sandbox demo site we show a login link all the time, but usually this whole bar is hidden when logged out #}
     {% if loginButton or aposCanEditSomething(permissions) %}
-      <div class="apos-admin-bar">
+      <div class="apos-admin-bar" style="display:none;">
         <div class="apos-admin-bar-inner">
           <div class="apos-logo-tiny">
             A

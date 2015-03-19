@@ -124,7 +124,7 @@ site.init({
   // while stylesheets contains the names of LESS files in /public/css
   assets: {
     stylesheets: ['site'],
-    scripts: ['_site-compiled']
+    scripts: ['vendor/lettering', '_site-compiled' ]
   },
 
   afterInit: function(callback) {
