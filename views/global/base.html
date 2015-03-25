@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Ribeye+Marrow' rel='stylesheet' type='text/css'>
   </head>
   {# bodyClass should be a block but nunjucks doesn't have conditional extends yet, #}
   {# so we're rendering an inner layout then passing the results to an outer one. #}
@@ -70,7 +71,30 @@
     <script>
   $(document).ready(function() {
     $(".fancy_title").lettering();
+    $('a').smoothScroll();
+    $('.arr').click(function(event){
+      event.preventDefault();
+      $.smoothScroll({
+        scrollTarget: "#feat",
+        speed: 800
+      })
+    });
+     var map = new google.maps.Map(
+        document.getElementById('map'), 
+        {
+          zoom: 15,
+          center: new google.maps.LatLng(36.808274, -119.756241)
+        }
+      );
+     var myLatlng = new google.maps.LatLng(36.808274, -119.756241);
+     var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: 'Hello World!'
+  });
+
   });
 </script>
+<script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
   </body>
 </html>

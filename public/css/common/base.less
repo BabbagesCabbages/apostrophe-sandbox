@@ -3,10 +3,18 @@ h1 {
 	font-weight: 700!important;
 	font-size: 80px!important;
 }
+p {
+	font-size: 16px;
+	font-family: 'Oswald'!important;
+}
+
+a {
+	font-family:'Oswald'!important;
+}
 
 .hero {
-	margin-top:-50px;
-	height:93vh;
+	/*margin-top:-50px;*/
+	height:98vh;
 	background:url("http://parksideitaliankitchen.com/wp-content/uploads/2013/09/photodune-4366017-barntender-making-a-cocktail-drink-m.jpg") no-repeat center center;
 	background-size:cover;
 		h1 {
@@ -52,18 +60,168 @@ h1 {
 		}
 		.hero-bars.bar2{
 			font-size:50px!important;
+			b {
+				font-size:41px!important;
+			}
 		}
 		.arrow {
 			position: absolute;
-			bottom: 0;
-			left: -15px;
+			bottom: 10px;
+			left: -6px;
+		}
+		.social i {
+			margin:2em;
+		}
+		a i:hover {
+			color:gold!important;
 		}
 	}
 .features {
-	height:400px;
-	background-color: whitesmoke;
+	background-color: white;
+	color: #404040;
+	a {
+		color:#404040;
+		font-weight: 100;
+		text-transform: uppercase;
+		margin-bottom: 20px;
+		width: 148px;
+	}
+	a:hover {
+		color:#404040;
+	}
+	.hours {
+		margin: 26px 0;
+	}
+	#feat {
+		height:100%;
+		text-align:center;
+		h4{
+			font-size: 27px;
+		}
+		.join {
+			font-size: 40px;
+			text-shadow: lightgray 1px 1px 1px;
+		}
+	}
+	.join{
+		font-family: 'oswald';
+		font-size: 34px;
+		margin-top: 38px;
+		width: 286px;
+		border-right: 3px solid black;
+		border-left: 3px solid black;
+		background-color: white;
+		z-index: 3;
+		margin: 32px auto 0 auto;
+	}
+	.fancy-hr {
+		position: relative;
+		bottom: 24px;
+		width: 50%;
+	}
+	.join-hr {
+		width: 200px;
+		background: black;
+		border-bottom: 1px double white;
+		&:before { 
+			border-left: 1px solid white;
+			border-right: 1px solid white;
+		}
+	}
+	h4 {
+		text-transform: uppercase;
+		margin-top: 18px;
+	}
+	h4:after {
+			content:" ";
+			width:50px;
+			height: 4px;
+			margin-bottom: 32px;
+			background-color: black;
+	}
+	hr {
+		margin: 0 auto;
+		width: 60px;
+		border: 2px solid black;
+		margin-bottom: 10px;
+	}
+	.border {
+		outline:0px solid gold;
+		transition: all 300ms ease-out;
+	}
+	.border:hover {
+		outline:10px solid gold;
+		transition: all 100ms ease-out;
+	}
+	.drinks {
+		i {
+			float:left;
+		}
+		p{
+		margin: 24px;
+		}
+	    p:hover i {
+	    	color:orange;
+	    }
+	}
+
 }
 .features2 {
-	height:400px;
-	background-color: gray;
+	background-color: lightgray;
+	position:relative;
+	#reserve {
+		text-align:center;
+		h4{
+			font-size: 27px;
+		}
+		.join {
+			font-size: 40px;
+			text-shadow: lightgray 1px 1px 1px;
+			text-transform: uppercase;
+		}
+	}
+	.join{
+		font-family: 'oswald';
+		font-size: 34px;
+		margin-top: 38px;
+		width: 377px;
+		border-right: 3px solid black;
+		border-left: 3px solid black;
+		background-color: lightgray;
+		z-index: 3;
+		margin: 32px auto 0 auto;
+	}
+	.join-hr {
+		width: 200px;
+	}
+	hr {
+		margin: 0 auto;
+		width: 60px;
+		border: 2px solid black;
+		margin-bottom: 10px;
+	}
+	.fancy-hr {
+		position: relative;
+		bottom: 24px;
+		width: 50%;
+	}
+	.bracket {
+		position:relative;
+	}
+	.bracket h1{
+		font-family: 'Ribeye Marrow'!important;
+		font-size: 206px!important;
+		transform: rotate(90deg);
+		margin: -41px 0 -151px;
+		display:inline-block;
+	}
+}
+
+.location {
+	background-color: white;
+	height:500px;
+}
+
+footer {
+	margin:0;
 }

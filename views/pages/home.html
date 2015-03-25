@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block nav %}
-<nav style="margin-bottom: 30px;" class="navbar navbar-inverse">
+<nav style="margin-bottom: 30px;" class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -33,22 +33,66 @@
     <h1 class="hero-bars space-t">&nbsp Guris &nbsp </h1>
     <h1>Grubhouse</h1>
     <div class="col-md-12">
-        <h1 class="hero-bars bar2">&nbsp&nbsp&nbsp&nbsp & taps &nbsp&nbsp&nbsp&nbsp</h1>
+        <h1 class="hero-bars bar2">&nbsp&nbsp&nbsp&nbsp <b>&</b> taps &nbsp&nbsp&nbsp&nbsp</h1>
     </div>
     <div class="col-md-12 text-center arrow">
-      <i style="color: white;" class="fa fa-arrow-down fa-3x"></i>
+      <a class="arr" href="#feat"><i style="color: white;" class="fa fa-chevron-down fa-3x"></i></a>
+    </div>
+    <div class="col-md-12 text-center social">
+      <a href="https://www.facebook.com/GurisGrubHouse"><i style="color:white;" class="fa fa-facebook fa-3x"></i></a>
+      <a href="https://twitter.com/gurisgrubhouse"><i style="color:white;" class="fa fa-twitter fa-3x"></i></a>
+      <a href="https://instagram.com/guris_grubhouse/"><i style="color:white;" class="fa fa-instagram fa-3x"></i></a>
     </div>
   </div>
   <section class="row features">
-    <div class="col-md-12">
+    <div id="feat" class="col-md-12"><br>
+      <h4 class="join">come join us</h4>
+      <hr class="fancy-hr" data-symbol="COME JOIN US">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-4">
+          <div class="col-md-8 col-md-offset-2">
+            <h4>Food</h4>
+             <hr>
+             <p>Brunch</p>
+             <h5>Served SAT-SUN:<br> 11AM-3PM<br></h5>
+             <p>Dinner</p>
+             <h5>Served EVERYDAY:<br> 4PM-CLOSE</h5>
+             <a href="" class="btn btn-warning">food menu</a>
+          </div>
+        </div>
+        <div class="col-md-4 drinks">
+          <h4>Drinks</h4>
+           <hr>
+           <p><i class="fa fa-beer fa-2x"></i><a href="">Local Beers on tap</a></p>
+           <p><i class="fa fa-glass fa-2x"></i><a href="">Hand-Crafted Cocktails</a></p>
+        </div>
+        <div class="col-md-4">
+          <h4>hours</h4>
+           <hr>
+           <h5 class="hours"><p>MON-THURS: 11AM - 10PM</p><p>FRIDAY-SAT: 11AM - 11PM<p>SUNDAY: 11AM - 9PM</p></h5>
+           <a href="" class="btn btn-warning">location</a>
+        </div>
+      </div>
     </div>
   </section>
   <section class="row features2">
-    <div class="col-md-12">
+    <div id="reserve" class="col-md-12">
+      <h4 class="join">Make a reservation</h4>
+      <hr class="fancy-hr" data-symbol="COME JOIN US">
+      <br>
+      <div class="wsb-htmlsnippet-element"><a href="https://www.seatme.yelp.com/restaurants/acff1d48-e13c-407d-bcba-229bc0d34b64/"><img title="Guri's Grubhouse and Taps Reservations" alt="Reserve Now" src="https://static.seatme.yelp.com/img/badges/black-158x34.png"></a></div>
+      <div class="col-md-12 bracket">
+        <h1>{</h1>
+      </div>
     </div>
   </section>
-   
-
-
-
+  <section class="row location">
+    <div id="map" style="height:500px" class="col-md-4">
+    </div>
+    <div class="col-md-4">
+      <h4 class="join">find us</h4>
+    </div>
+    <div class="col-md-4 location-bg">
+    </div>
+  </section>
 {% endblock %}

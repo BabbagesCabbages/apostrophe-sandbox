@@ -26,7 +26,8 @@
     "apostrophe-site": "0.5.x",
     "apostrophe-snippets": "^0.5.79",
     "apostrophe-ui-2": "0.5.x",
-    "optimist": "~0.6.0"
+    "optimist": "~0.6.0",
+    "jquery-smooth-scroll": "1.5.5"
   },
   "engines": {
     "node": "0.10.x"
