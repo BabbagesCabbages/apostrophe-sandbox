@@ -13,9 +13,9 @@ a {
 }
 
 .hero {
-	/*margin-top:-50px;*/
-	height:98vh;
-	background:url("http://parksideitaliankitchen.com/wp-content/uploads/2013/09/photodune-4366017-barntender-making-a-cocktail-drink-m.jpg") no-repeat center center;
+	margin-top:-50px;
+	height:94vh;
+	background:url("http://parksideitaliankitchen.com/wp-content/uploads/2013/09/photodune-4366017-barntender-making-a-cocktail-drink-m.jpg") no-repeat center center fixed;
 	background-size:cover;
 		h1 {
 			color: white;
@@ -69,6 +69,9 @@ a {
 			bottom: 10px;
 			left: -6px;
 		}
+		.social {
+			height:50px;
+		}
 		.social i {
 			margin:2em;
 		}
@@ -100,7 +103,6 @@ a {
 		}
 		.join {
 			font-size: 40px;
-			text-shadow: lightgray 1px 1px 1px;
 		}
 	}
 	.join{
@@ -116,7 +118,7 @@ a {
 	}
 	.fancy-hr {
 		position: relative;
-		bottom: 24px;
+		bottom: 57px;
 		width: 50%;
 	}
 	.join-hr {
@@ -138,6 +140,9 @@ a {
 			height: 4px;
 			margin-bottom: 32px;
 			background-color: black;
+	}
+	h5 {
+
 	}
 	hr {
 		margin: 0 auto;
@@ -171,14 +176,34 @@ a {
 	position:relative;
 	#reserve {
 		text-align:center;
+		background: url("../images/food2.jpg")no-repeat center center fixed;
+		background-size: cover;
 		h4{
 			font-size: 27px;
 		}
 		.join {
 			font-size: 40px;
-			text-shadow: lightgray 1px 1px 1px;
+			color: #404040;
 			text-transform: uppercase;
+			background-color: white;
+			z-index: 3;
 		}
+	}
+	#reserve:after {
+		content:"";
+		width: 100%;
+	    height: 100%;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    bottom:0;
+	    right:0;
+	    display:block;
+	    background: rgba(255, 187, 0, 0.4);
+	    z-index: 1;
+	}
+	#reserve * {
+		z-index: 2;
 	}
 	.join{
 		font-family: 'oswald';
@@ -187,7 +212,7 @@ a {
 		width: 377px;
 		border-right: 3px solid black;
 		border-left: 3px solid black;
-		background-color: lightgray;
+		background-color: transparent;
 		z-index: 3;
 		margin: 32px auto 0 auto;
 	}
@@ -217,11 +242,159 @@ a {
 	}
 }
 
+.chef {
+	background-color:black;
+	.bg {
+		background: url("../images/chef.jpg")no-repeat top center;
+		background-size: cover; 
+		height: 329px;
+	}
+	.chef-img{
+	  background-color: white;
+      padding: 10px;
+  	  position: relative;
+  	  height:329px;
+	}
+	.chef-img:before {
+	  position: absolute;
+	  content: " ";
+	  display: block;
+	  left: -50px;
+	  top: 0px;
+	  bottom: 73px;
+	  border-left: 0px solid transparent;
+	  border-bottom: 50px solid transparent;
+	  border-right: 50px solid white;
+	  height: 50%;
+	  width: 0;
+	}
+	.chef-img:after {
+	  position: absolute;
+	  content: " ";
+	  display: block;
+	  left: -100px;
+	  bottom: 0px;
+	  border-top: 50px solid transparent;
+	  border-left: 50px solid transparent;
+	  border-right: 50px solid white;
+	  height: 50%;
+      width: 0;
+	}
+	h1 {
+		text-transform: uppercase;
+		font-size: 54px!important;
+	}
+	b {
+		text-transform: lowercase;
+		font-family:'roboto';
+		font-weight: 300;
+	}
+	p {
+		font-size: 18px;
+		margin: 0 60px;
+		font-weight: 300;
+		max-height:329px;
+	}
+	a {
+		margin: 2% 38%;
+	}
+}
+
 .location {
 	background-color: white;
 	height:500px;
+	.bg {
+		background:url("../images/location-bg.jpg")no-repeat center;
+		background-size: cover;
+		height:100%;
+	}
+	#location {
+		text-align:center;
+		h4{
+			font-size: 27px;
+		}
+		.join {
+			font-size: 40px;
+			text-shadow: lightgray 1px 1px 1px;
+			text-transform: uppercase;
+		}
+	}
+	.join{
+		font-family: 'oswald';
+		font-size: 34px;
+		margin-top: 38px;
+		width: 149px;
+		border-right: 3px solid black;
+		border-left: 3px solid black;
+		background-color: white;
+		z-index: 3;
+		margin: 32px auto 0 auto;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	hr {
+		border: 0;
+		border-top: 3px solid black;
+		width: 65%;
+		margin: -21px auto 20px auto;
+	}
+	.find-us {
+		background-color: goldenrod;
+		height:100%;
+		a {
+			color: #404040;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+		p {
+			color: #404040;
+			display:inline-block;
+			font-size: 25px;
+			margin-left: 14px;
+			text-transform: uppercase;
+		}
+		i {
+			color: #404040;
+			display:inline-block;
+			border: 5px solid #404040;
+			border-radius: 50%;
+			width: 73px;
+			height: 70px;
+			padding-left: 23px;
+			padding-top: 10px;
+		}
+
+		.links {
+			margin:15px 0;
+		}
+		.links i:hover {
+			color: #404040;
+		}
+	}
+	
+}
+
+
+
+.overlay {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom:0;
+    right:0;
+    background: rgba(255, 187, 0, 0.4);
+}
+
+.height-100{
+	height:100%;
 }
 
 footer {
 	margin:0;
+}
+
+a {
+	color:white;
 }

@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block nav %}
-<nav style="margin-bottom: 30px;" class="navbar navbar-inverse navbar-fixed-top">
+<nav style="margin-bottom: 30px;" class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -46,7 +46,8 @@
   </div>
   <section class="row features">
     <div id="feat" class="col-md-12"><br>
-      <h4 class="join">come join us</h4>
+      <h4 class="join">gas·tro·pub</h4>
+      <h6> - a pub that specializes in serving high-quality food and drinks.</h6>
       <hr class="fancy-hr" data-symbol="COME JOIN US">
       <div class="col-md-8 col-md-offset-2">
         <div class="col-md-4">
@@ -78,21 +79,40 @@
   <section class="row features2">
     <div id="reserve" class="col-md-12">
       <h4 class="join">Make a reservation</h4>
-      <hr class="fancy-hr" data-symbol="COME JOIN US">
+      <hr class="fancy-hr" data-symbol="Reservation">
       <br>
-      <div class="wsb-htmlsnippet-element"><a href="https://www.seatme.yelp.com/restaurants/acff1d48-e13c-407d-bcba-229bc0d34b64/"><img title="Guri's Grubhouse and Taps Reservations" alt="Reserve Now" src="https://static.seatme.yelp.com/img/badges/black-158x34.png"></a></div>
+      <a href="https://www.seatme.yelp.com/restaurants/acff1d48-e13c-407d-bcba-229bc0d34b64/"><img title="Guri's Grubhouse and Taps Reservations" alt="Reserve Now" src="https://static.seatme.yelp.com/img/badges/black-158x34.png"></a>
       <div class="col-md-12 bracket">
-        <h1>{</h1>
+        <h1 style="color:white;">{</h1>
       </div>
     </div>
   </section>
-  <section class="row location">
+  <section class="row chef">
+    <div class="col-md-12 height-100">
+      <div class="col-md-4 height-100 bg">
+      </div>
+      <div class="col-md-8 chef-img">
+        <h1>Executive Chef<b> Megan Beck</b></h1>
+        <hr class="fancy-hr" data-symbol="Megan Beck">
+        <p>Megan graduated from the French Culinary institute of New York and has worked all over the country opening restaurants for Oceanaire Seafood Room. She has worked with Top Chef's <i>Brian Malarkey</i> in Seattle & San Diego. Through out her travels, Chef Megan was privileged to work with a variety of chefs, each with their own individual culinary expertise. She devleoped a personal culinary style of simple, clean flavors, with a soulful twist. Check out Megan's Blog here...<br> <a class="btn btn-warning" href="">Chefs Blog</a></p>
+      </div>
+    </div>
+  </section>
+  <section id="location" class="row location">
     <div id="map" style="height:500px" class="col-md-4">
+
     </div>
-    <div class="col-md-4">
+    <div class="col-md-4 find-us">
       <h4 class="join">find us</h4>
+      <hr class="fancy-hr" data-symbol="FIND US">
+      <div class="links"><i style="padding-left:21px;" class="fa fa-map-marker fa-3x"></i><p>1713 E. Shaw Ave. Fresno, CA</p><br></div>
+      <div class="links"><i style="padding-left:19px;padding-top:13" class="fa fa-phone fa-3x"></i><p>(559)225-2902</p><br></div>
+      <div class="links"><i class="fa fa-facebook fa-3x"></i><p><a href="">like us on facebook</a></p><br></div>
+      <div class="links"><i style="padding-left:15px;" class="fa fa-twitter fa-3x"></i><p><a href="">follow us on twitter</a></p><br></div>
+      <div class="links"><i style="padding:10px 0 0 14px;" class="fa fa-envelope-o fa-3x"></i><p><a href="mailto:gurisgrubhouse@guris.com">gurisgrubhouse@guris.com</a></p><br></div>
     </div>
-    <div class="col-md-4 location-bg">
-    </div>
+    <div class="col-md-4 bg">
+      <div class="overlay"></div>
+    </div>  
   </section>
 {% endblock %}
