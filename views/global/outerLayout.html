@@ -22,7 +22,7 @@
           {{ aposGroupsMenu(permissions) }}
           {{ aposMediaMenu({ edit: permissions.guest })}}
           {{ aposTagsMenu({ edit: permissions.admin }) }}
-
+          {{ aposSnippetMenu({ edit: editSnippet }) }}
           {% if edit %}
             <div class="apos-admin-bar-item apos-preview-toggle">
               <i class="icon-eye"></i>
@@ -55,6 +55,7 @@
         </div>
       </div>
       {{ aposPagesMenu({ contextMenu: contextMenu, page: page, bottom: true }) }}
+
     {% endif %}
   {% endblock %}
 

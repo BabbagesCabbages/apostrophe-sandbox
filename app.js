@@ -46,7 +46,8 @@ site.init({
     types: [
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
-      { name: 'blog', label: 'Blog' }
+      { name: 'blog', label: 'Blog' },
+      { name: 'events', label: 'Events' }
     ]
   },
 
@@ -75,6 +76,10 @@ site.init({
   modules: {
     // Styles required by the new editor, must go FIRST
     'apostrophe-editor-2': {},
+    'apostrophe-snippets': {},
+    'apostrophe-events': {
+      widget:true
+     },
     'apostrophe-ui-2': {},
     'apostrophe-blog-2': {
       perPage: 5,
