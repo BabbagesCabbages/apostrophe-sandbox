@@ -11,12 +11,24 @@ p {
 a {
 	font-family:'Oswald'!important;
 }
-
+nav {
+	z-index: 5;
+}
 .hero {
-	margin-top:-50px;
-	height:94vh;
-	background:url("http://parksideitaliankitchen.com/wp-content/uploads/2013/09/photodune-4366017-barntender-making-a-cocktail-drink-m.jpg") no-repeat center center fixed;
-	background-size:cover;
+	height: 94vh;
+	#bgvid {
+			position: absolute; right: 0; bottom: 0;left:0;top:0;
+			min-width: 100%; min-height: 100%;
+			width: auto; height: auto;
+			background: url(guri.jpg) no-repeat;
+			background-size: cover;
+/*			height:94vh;
+			width:100vw;*/
+		}
+		video { 
+		  -webkit-transform: scale(2,2); 
+		  -moz-transform: scale(2,2);
+		}
 		h1 {
 			color: white;
 			text-align: center;
@@ -98,12 +110,15 @@ a {
 	#feat {
 		height:100%;
 		text-align:center;
+		background-color: white;
+		z-index: 2;
 		h4{
 			font-size: 27px;
 		}
 		.join {
 			font-size: 40px;
 		}
+
 	}
 	.join{
 		font-family: 'oswald';
@@ -178,6 +193,7 @@ a {
 		text-align:center;
 		background: url("../images/food2.jpg")no-repeat center center fixed;
 		background-size: cover;
+		z-index: 3;
 		h4{
 			font-size: 27px;
 		}
@@ -243,6 +259,9 @@ a {
 	}
 }
 
+.chef* {
+	z-index: 3;
+}
 .chef {
 	background-color:black;
 	.bg {
@@ -402,3 +421,5 @@ footer {
 a {
 	color:white;
 }
+
+

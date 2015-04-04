@@ -47,7 +47,8 @@ site.init({
       { name: 'default', label: 'Default Page' },
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Blog' },
-      { name: 'events', label: 'Events' }
+      { name: 'events', label: 'Events' },
+      { name: 'snippets', label: 'Snippets' },
     ]
   },
 
