@@ -40,27 +40,82 @@
       </nav>
 {% endblock %}
 {% block main %}
-<div class="container-fluid menu no-pad">
-	<div class="col-md-12 bg">
-		 {{ aposArea(page, 'm1-menu', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' },
-            { value: 'h5', label: 'Subtitle' }
-          ],
-          lockups: ['left', 'right']
-        }) }}
-		 {{ aposArea(page, 'm2-menu', {
-          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
-          styles: [
-            { value: 'p', label: 'Text' },
-            { value: 'h3', label: 'Title' },
-            { value: 'h5', label: 'Subtitle' }
-          ],
-          lockups: ['left', 'right']
-        }) }}
+<div class="row">
+	<div class="menu text-center col-md-5 col-md-offset-1">
+	  <h1>Appetizers</h1>
+	  <div class="corner topleft"></div>
+	  <div class="corner topright"></div>
+	  <div class="corner bottomleft"></div>
+	  <div class="corner bottomright"></div>
+	  <ul>
+	    <li class="veggie">
+	      <em><b>Jalapeno Poppers  $8</b><br>Fresh jalapenos, house smoked bacon cream cheese, cheddar bread crumbs </em>
+	    </li>
+	    <li>
+	      <em><b>Poutine  $7</b><br>Shoe-string fries topped with brown gravy, fried dairy goddess cheese curd</em>
+	    </li>
+	    <li class="veggie">
+	      <em><b>Tater Skins  $7</b><br>Cheddar cheese, house smoked bacon bits, creme fraiche, green onions<br>&nbsp;</em>
+	    </li>
+	    <li>
+	      <em><b>Carne Asada Fries  $8</b><br>Shoe-string fries, carne asada, cheddar, cheese sauce, cilantro, pico degallo, crème fraiche </em>
+	    </li>
+	    <li>
+	      <em><b>Bluecorn Dipped Dogs  $8</b><br>Homemade corndogs served with sriracha ketchup, ale infused mustard</em>
+	    </li>
+	    <li>
+	      <em><b>Beer Rocks  $6.5</b><br>Seasoned‎ hamburger and cabbage, wrapped in a biscuit </em>
+	    </li>
+	    <li>
+	      <em><b>Paper Bag Chips & Dip  $6</b><br>Homemade potato chips served with smoked bacon and onion dip</em>
+	    </li>
+	  </ul>
 	</div>
+	<div class="menu text-center col-md-5">
+	  <h1>Sandwiches</h1>
+	  <h4 class="text-muted">served with just-fried chips on <i>max’s artisan bread</i>,<br> sub shoe-string fries <b>$1</b><br>Add chicken or egg <b>$2</b></h4>
+	  <div class="corner topleft"></div>
+	  <div class="corner topright"></div>
+	  <div class="corner bottomleft"></div>
+	  <div class="corner bottomright"></div>
+	  <ul>
+	    <li>
+	      <em>{{ aposArea(page, 'sandwich1', {
+          controls: ['style'],
+                styles: [
+            { value: 'h4', label: 'Title' }
+            ],
+            lockups: ['left', 'right']
+            }) 
+          }}<br>{{ aposArea(page, 'sandwich1-text', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink'],
+          styles: [
+            { value: 'em', label: 'Text' }
+          ],
+          lockups: ['left', 'right']
+        }) }}</em>
+	    </li>
+	    <li>
+	      <em><b>Poutine  $7</b><br>Shoe-string fries topped with brown gravy, fried dairy goddess cheese curd</em>
+	    </li>
+	    <li>
+	      <em><b>Tater Skins  $7</b><br>Cheddar cheese, house smoked bacon bits, creme fraiche, green onions<br>&nbsp;</em>
+	    </li>
+	    <li>
+	      <em><b>Carne Asada Fries  $8</b><br>Shoe-string fries, carne asada, cheddar, cheese sauce, cilantro, pico degallo, crème fraiche </em>
+	    </li>
+	    <li>
+	      <em><b>Bluecorn Dipped Dogs  $8</b><br>Homemade corndogs served with sriracha ketchup, ale infused mustard</em>
+	    </li>
+	    <li>
+	      <em><b>Beer Rocks  $6.5</b><br>Seasoned‎ hamburger and cabbage, wrapped in a biscuit </em>
+	    </li>
+	    <li>
+	      <em><b>Paper Bag Chips & Dip  $6</b><br>Homemade potato chips served with smoked bacon and onion dip</em>
+	    </li>
+	  </ul>
+	</div>
+</div> <!-- ends row -->
 	<section class="row features2">
     <div id="reserve" class="col-md-12">
       <div style="z-index: 2;" class="col-md-4 col-md-offset-2">
