@@ -40,5 +40,75 @@
       </nav>
 {% endblock %}
 {% block main %}
+<div class="container-fluid menu no-pad">
+	<div class="col-md-12 bg">
+		 {{ aposArea(page, 'm1-menu', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
+		 {{ aposArea(page, 'm2-menu', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
+	</div>
+	<section class="row features2">
+    <div id="reserve" class="col-md-12">
+      <div style="z-index: 2;" class="col-md-4 col-md-offset-2">
+      <h4 class="join">
+          {{ aposArea(page, 'title1-menu', {
+          controls: ['style'],
+                styles: [
+            { value: 'h4', label: 'Title' }
+            ],
+            lockups: ['left', 'right']
+            }) 
+          }}
+        </h4>
+        {{ aposArea(page, 'main1-menu', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
+      </div>
+      <div style="z-index: 2;" class="col-md-4">
+        <h4 class="join">
+          {{ aposArea(page, 'title2-menu', {
+          controls: ['style'],
+                styles: [
+            { value: 'h4', label: 'Title' }
+            ],
+            lockups: ['left', 'right']
+            }) 
+          }}
+        </h4>
+        {{ aposArea(page, 'main2-menu', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
+      </div>
+    </div>
+  </section>
+</div>
+
 <h1>test</h1>
+
 {% endblock %}
