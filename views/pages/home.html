@@ -86,7 +86,16 @@
   <section class="row features2">
     <div id="reserve" class="col-md-12">
       <div style="z-index: 2;" class="col-md-4 col-md-offset-2">
-      <h4 class="join">Event New</h4>
+      <h4 class="join">
+          {{ aposArea(page, 'title1', {
+          controls: ['style'],
+                styles: [
+            { value: 'h4', label: 'Title' }
+            ],
+            lockups: ['left', 'right']
+            }) 
+          }}
+        </h4>
         {{ aposArea(page, 'main1', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
@@ -98,7 +107,16 @@
         }) }}
       </div>
       <div style="z-index: 2;" class="col-md-4">
-        <h4 class="join">Event Old</h4>
+        <h4 class="join">
+          {{ aposArea(page, 'title2', {
+          controls: ['style'],
+                styles: [
+            { value: 'h4', label: 'Title' }
+            ],
+            lockups: ['left', 'right']
+            }) 
+          }}
+        </h4>
         {{ aposArea(page, 'main2', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
