@@ -44,11 +44,10 @@ site.init({
 
   pages: {
     types: [
-      { name: 'default', label: 'Default Page' },
+      { name: 'menu', label: 'Menu Page' },
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Blog' },
       { name: 'events', label: 'Events' },
-      { name: 'snippets', label: 'Snippets' },
     ]
   },
 

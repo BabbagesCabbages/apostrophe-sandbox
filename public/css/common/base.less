@@ -1,3 +1,6 @@
+body {
+	background-color: #d8d6d0!important;
+}
 h1 {
 	font-family: 'Oswald'!important;
 	font-weight: 700!important;
@@ -14,8 +17,34 @@ a {
 nav {
 	z-index: 5;
 }
+.navbar .nav,
+.navbar .nav > li {
+	font-size: 30px;
+padding: 5px;
+  float:none;
+  display:inline-block;
+  *display:inline; /* ie7 fix */
+  *zoom:1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+.navbar .nav a {
+	font-family: "open sans"!important;
+font-weight: 300;
+text-transform: uppercase;
+}
+
+.navbar-collapse {
+  text-align:center;
+}
+.navbar-inverse {
+background-color: rgba(0,0,0,.6)!important;
+border:none!important;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+border:none!important;
+}
 .hero {
-	height: 94vh;
+	height: 100vh;
 	#bgvid {
 			position: absolute; right: 0; bottom: 0;left:0;top:0;
 			min-width: 100%; min-height: 100%;
@@ -85,12 +114,6 @@ nav {
 		.hero-bars.bar2 {
 			z-index: 1;
 		}
-		/*.arrow {
-			position: absolute;
-			bottom: 10px;
-			left: -6px;
-			z-index: 2;
-		}*/
 
 		.social {
 			height:50px;
@@ -411,7 +434,7 @@ nav {
 		p {
 			color: white;
 			display:inline-block;
-			font-size: 25px;
+			font-size: 20px;
 			margin-left: 14px;
 			text-transform: uppercase;
 		}
@@ -454,7 +477,7 @@ nav {
     z-index:4;
 }
 .overlay-h {
-	background: rgba(0,0,0,.8);
+	background: rgba(0,0,0,.4);
 	z-index: 1;
 }
 

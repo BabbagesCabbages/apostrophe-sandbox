@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block nav %}
-<nav style="margin-bottom:-20px;" class="navbar navbar-inverse">
+ <nav style="margin-bottom:-90px;" class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -18,11 +18,15 @@
             <!-- <a class="navbar-brand" href="#">Project name</a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
-            <ul style="margin-left: 38%;" class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">Menu</a></li>
+            <ul class="nav navbar-nav">
+            {% if page.parent.type == 'default' %}
+              <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
+          {% endif %}
+            {% for child in page.children %}
+              <li><a href="{{ child.url }}">{{ child.title }}</a></li>
               <li><a href="#">Chefs Blog</a></li>
               <li><a href="#">Contact</a></li>
+              {% endfor %}
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -154,7 +158,6 @@
   <div class="spacer"></div>
   <section id="location" class="row location">
     <div id="map" style="height:500px" class="col-md-4">
-
     </div>
     <div class="col-md-4 find-us">
       <h4 class="join">find us</h4>
