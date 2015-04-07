@@ -12,7 +12,12 @@ site.init({
   title: 'Apostrophe Sandbox',
   sessionSecret: 'apostrophe sandbox demo party',
   adminPassword: 'demo',
-
+  sanitizeHtml: {
+  allowedClasses: {
+    'h4': ['title-text'],
+    'p': ['menu-title','menu-text']
+    }
+  },
   // Force a2 to prefix all of its URLs. It still
   // listens on its own port, but you can configure
   // your reverse proxy to send it traffic only

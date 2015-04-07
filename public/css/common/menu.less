@@ -17,34 +17,24 @@ body {
   display: table;
   clear: both;
 }
-.menu ul {
+.menu > ul:not(.apos-ui-container) {
   list-style-type: none;
   padding: 0;
   position: relative;
 }
-.menu li {
+.menu .menu-content > li {
   position: relative;
-  width: 50%;
-  float: left;
-  display: inline-block;
+  width: 40%;
+  display: inline-flex;
   border-bottom: 1px dotted rgba(0, 0, 0, 0.3);
+  padding-left: 10%;
 }
-.menu li span {
-  position: relative;
-  float: right;
-  top: .2em;
-  padding: 1px 0 1px 5px;
+.menu .menu-content > li span {
+
   background: #fff url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
 }
-.menu li em {
-  position: relative;
-  float: left;
-  font-style: normal;
-  font-size:15px;
-  margin: .8em;
-  line-height: 33px;
-  top: .2em;
-  padding: 0 5px 0 0;
+.menu .menu-content > li em {
+
   background: #fff url(http://subtlepatterns.com/patterns/lightpaperfibers.png);
 }
 .menu h1 {
@@ -87,7 +77,18 @@ h1 {
   border-color: transparent transparent #404040 transparent;
 }
 
+.menu-text {
+  font-family: "open sans"!important;
+  font-weight: normal;
+  font-size: 15px;
+}
 
+.menu-title {
+  font-family: "open sans"!important;
+  font-weight: bold;
+  font-size: 15px;
+  margin-top: 15px;
+}
 
 @media(max-width:767px) {
   .menu {
