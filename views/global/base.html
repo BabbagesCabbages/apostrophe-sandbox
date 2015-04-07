@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Ribeye+Marrow' rel='stylesheet' type='text/css'>
   </head>
   {# bodyClass should be a block but nunjucks doesn't have conditional extends yet, #}
@@ -92,7 +93,8 @@
       map: map,
       title: 'Hello World!'
   });
-       
+     var vid = document.getElementById("bgvid");
+    vid.playbackRate = 0.5;  
   });
 </script>
 <script type="text/javascript" src="//maps.google.com/maps/api/js?sensor=true"></script>
