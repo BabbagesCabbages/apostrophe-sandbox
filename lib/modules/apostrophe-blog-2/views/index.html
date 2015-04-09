@@ -32,8 +32,18 @@
           {% endif %}
             {% for child in page.children %}
               <li><a href="{{ child.url }}">{{ child.title }}</a></li>
-              <li><a href="#">Contact</a></li>
               {% endfor %}
+              <li class="nav-item">
+    {% if not page.ancestors.length %}
+      <a href="/" class="active">{{ page.title | e }}</a>
+    {% else %}
+      <a href="{{ page.ancestors[0].url | e }}"
+        {% if page.slug == '/' %}class="active"{% endif %}
+      >
+      {{ page.ancestors[0].title | e }}</a>
+    {% endif %}
+    <li><a href="/menu">Menu</a></li>
+  </li>
             </ul>
           </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
@@ -41,10 +51,10 @@
 {% endblock %}
 {% block headerContent %}
 <div class="chefs">
-<div class="overlay"></div>
+<div class="overlay black"></div>
   <div class="row">
     <div class="col-md-6 bg">
-      <h1>Megan Deck</h1>
+      <h1>Megan <b>Deck</b></h1>
     </div>
     <div class="col-md-6">
       <div class="row">
@@ -128,5 +138,4 @@
   </section>
 </div>
 </div>
-<h1>HELLO BLOGGY HELLA HELLO!!!!!!</h1>
 {% endblock %}
