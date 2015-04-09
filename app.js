@@ -51,11 +51,14 @@ site.init({
     types: [
       { name: 'menu', label: 'Menu Page' },
       { name: 'home', label: 'Home Page' },
-      { name: 'blog', label: 'Blog' },
+      { name: 'blog', label: 'Chefs Blog' },
       { name: 'events', label: 'Events' },
     ]
   },
-
+// Load descendants of homepage and current page two levels deep
+    // instead of one
+    tabOptions: { depth: 20 },
+    descendantOptions: { depth: 20 },
   lockups: {
     left: {
       label: 'Left',
@@ -87,7 +90,7 @@ site.init({
      },
     'apostrophe-ui-2': {},
     'apostrophe-blog-2': {
-      perPage: 5,
+      perPage: 10,
       pieces: {
         addFields: [
           {

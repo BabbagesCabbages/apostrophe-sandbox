@@ -1,20 +1,13 @@
-{% extends 'layout.html' %}
-{% include 'pageMacros.html' %}
-{% include 'blogMacros.html' %}
-{% include 'pagerMacros.html' %}
+{% extends "layout.html" %}
+{% block bodyClass %}{{ super() }} blog-page{% endblock %}
 
-{# the bodyClass block allows us to attach a classname to the body tag for easy style-scoping. #}
-{# be sure to call super() so that any pages inheriting this one will be appending classes, not overriding them. #}
-{% block bodyClass %} blog-page{% endblock %}
-
-{% block headerMessage %}{% endblock %}
-
-{% block upperClass %}blog-page{% endblock %}
 {# breadcrumbs are excluded from the homepage #}
 {% block breadcrumbs %}
 {% endblock %}
+
+
 {% block nav %}
- <nav style="margin-bottom:-90px;" class="navbar navbar-inverse">
+      <nav style="margin-bottom:-20px;" class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -28,9 +21,12 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
             {% if page.parent.type == 'default' %}
-              <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
-          {% endif %}
+          		<a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
+        	{% endif %}
+        	 <li><a href="/">Home</a></li>
+              <li><a href="#">Contact</a></li>
             {% for child in page.children %}
+              <li><a href="/">Home</a></li>
               <li><a href="{{ child.url }}">{{ child.title }}</a></li>
               <li><a href="#">Contact</a></li>
               {% endfor %}
@@ -39,47 +35,9 @@
         </div><!--/.container-fluid -->
       </nav>
 {% endblock %}
-{% block headerContent %}
-<div class="chefs">
-<div class="overlay"></div>
-  <div class="row">
-    <div class="col-md-6 bg">
-      <h1>Megan Deck</h1>
-    </div>
-    <div class="col-md-6">
-      <div class="row">
-        <div class="col-md-4 bg2"></div>
-        <div class="col-md-4 bg3"></div>
-        <div class="col-md-4 bg4"></div>
-      </div>
-      <div class="row">
-        <div class="col-md-4 bg5"></div>
-        <div class="col-md-4 bg6"></div>
-        <div class="col-md-4 bg7"></div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endblock %}
-
-
-{% block mainContent %}
-
-<div class="block content">
-  <div class="inner">
-    {% if page._edit %}
-      <div data-new-blog-post>
-        <div class="apos-ui-container">
-          <a class="apos-control apos-button" href="#"><i class="icon-plus"></i> New Blog Post</a>
-      </div>
-      </div>
-    {% endif %}
-    {{ renderBlogListings(pieces) }}
-    {%- if ((pager.page > 1) or (pager.total > 1)) -%}
-      <div class="demo-pager align-right">{{ renderPager(pager, page.slug) }}</div>
-    {%- endif -%}
-  </div>
-</div>
+{% block main %}
+<div class="row">
+	<div class="menu text-center col-md-6 col-md-offset-3">
 <section class="row features2">
     <div id="reserve" class="col-md-12">
       <div style="z-index: 2;" class="col-md-4 col-md-offset-2">
@@ -127,6 +85,7 @@
     </div>
   </section>
 </div>
-</div>
-<h1>HELLO BLOGGY HELLA HELLO!!!!!!</h1>
+
+<h1>test</h1>
+
 {% endblock %}

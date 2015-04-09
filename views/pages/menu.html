@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% block bodyClass %}{{ super() }} home-page{% endblock %}
+{% block bodyClass %}{{ super() }} menu-page{% endblock %}
 
 {# breadcrumbs are excluded from the homepage #}
 {% block breadcrumbs %}
@@ -7,7 +7,6 @@
 
 
 {% block nav %}
-
       <nav style="margin-bottom:-20px;" class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
@@ -25,13 +24,10 @@
           		<a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
         	{% endif %}
         	 <li><a href="/">Home</a></li>
-              
-              <li><a href="#">Chefs Blog</a></li>
               <li><a href="#">Contact</a></li>
             {% for child in page.children %}
               <li><a href="/">Home</a></li>
               <li><a href="{{ child.url }}">{{ child.title }}</a></li>
-              <li><a href="#">Chefs Blog</a></li>
               <li><a href="#">Contact</a></li>
               {% endfor %}
             </ul>
