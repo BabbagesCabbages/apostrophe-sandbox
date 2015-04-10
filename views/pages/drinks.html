@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% block bodyClass %}{{ super() }} menu-page{% endblock %}
+
+{# breadcrumbs are excluded from the homepage #}
+{% block breadcrumbs %}
+{% endblock %}
+
+
+{% block nav %}
+      <nav style="margin-bottom:-20px;" class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Project name</a> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            {% if page.parent.type == 'default' %}
+          		<a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
+        	{% endif %}
+        	 <li><a href="/">Home</a></li>
+            {% for child in page.children %}
+              <li><a href="/">Home</a></li>
+              <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+
+              {% endfor %}
+<li><a href="/chefs-blog">Chefs Blog</a></li>
+<li><a href="/menu">Menu</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+{% endblock %}
+{% block main %}
+<div class="row brick">
+<div style="height: 800px;" class="col-md-12">
+  <div class="col-md-8 col-md-offset-2">
+    <iframe style="font-family:"open sans"!important;" width="100%" height="750" src="https://thetaphunter.appspot.com/widgets/locationWidget?orderby=name&amp;style=on&amp;breweryname=on&amp;format=images&amp;brewerylocation=on&amp;servingtype=both&amp;location=Guris-GrubHouse-%26-Taps&amp;height=575&amp;updatedate=on&amp;backgroundColor=lightgray&amp;servingsize=on&amp;servingprice=on"></iframe>
+  </div>
+</div>
+</div>
+
+{% endblock %}

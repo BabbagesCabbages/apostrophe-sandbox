@@ -53,6 +53,7 @@ site.init({
       { name: 'home', label: 'Home Page' },
       { name: 'blog', label: 'Chefs Blog' },
       { name: 'events', label: 'Events' },
+      { name: 'drinks', label: 'Drinks' },
     ]
   },
 // Load descendants of homepage and current page two levels deep
