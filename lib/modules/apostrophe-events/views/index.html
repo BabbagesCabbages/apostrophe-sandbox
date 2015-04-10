@@ -16,24 +16,56 @@
 {%- endmacro -%}
 
 {% block mainContent %}
-
-  <div class="snippets-filter clearfix">
-    {% if defaultView %}
-      {# Currently showing upcoming events #}
-      <h2 class="month active">{{ __('Upcoming Events') }}</h2>
-      <h2 class="month by-month-button"><a href="{{ here({ year: thisYear, month: thisMonth }) }}">{{ __('Events by Month') }}</a></h2>
+{% block nav %}
+ <nav style="margin-bottom:-90px;" class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- <a class="navbar-brand" href="#">Project name</a> -->
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+            {% if page.parent.type == 'default' %}
+              <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
+          {% endif %}
+            {% for child in page.children %}
+              <li><a href="{{ child.url }}">{{ child.title }}</a></li>
+              {% endfor %}
+              <li class="nav-item">
+    {% if not page.ancestors.length %}
+      <a href="/" class="active">{{ page.title | e }}</a>
     {% else %}
-      {# Currently showing a particular month of events #}
-      <h2 class="month upcoming-button"><a href="{{ here({ year: null, month: null }) }}">{{ __('Upcoming Events') }}</a></h2>
-      <h2 class="month browse-by-month active">
+      <a href="{{ page.ancestors[0].url | e }}"
+        {% if page.slug == '/' %}class="active"{% endif %}
+      >
+      {{ page.ancestors[0].title | e }}</a>
+    {% endif %}
+    <li><a href="/menu">Menu</a></li>
+  </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+{% endblock %}
+
+{% if defaultView %}
+<h1>{{ __('Upcoming Events') }}</h1>
+<a href="{{ here({ year: thisYear, month: thisMonth }) }}">{{ __('Events by Month') }}</a>
+{% else %}
+<a href="{{ here({ year: null, month: null }) }}">{{ __('Upcoming Events') }}</a>
+<h2 class="month browse-by-month active">
         <a class="month-previous" {#class="button previous"#} href="{{ here({ year: prevYear, month: prevMonth }) }}">&laquo;</a>
         <span class="month current">{{ (activeYear + '-' + activeMonth + '-01') | date('MMMM YYYY') }}</span>
         <a class="month-next" {#class="button next"#} href="{{ here({ year: nextYear, month: nextMonth }) }}">&raquo;</a>
       </h2>
-    {% endif %}
-    {# Do not show unusable filters #}
-    {% if allTags.length %}
-      <h2>
+{% endif %}
+{% if allTags.length %}
+ <h2>
         <label for="type-filter">{{ __('Filter') }}</label>
         <select id="snippets-tag-filter" name="type-filter">
           <option value="{{ here({ tag: null }) }}">{{ __('All') }}</option>
@@ -45,26 +77,76 @@
         </select>
       </h2>
     {% endif %}
+<div class="accordion">
+  <ul>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+    <li>
+      <div>
+        <a href="#">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        </a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="row">
+  <div class="col-md-4">
+    
   </div>
-
-  <div class="column-element filter-links">
-    {% set filteredFeed = here({ 'feed': 'rss' }) %}
-    {% set fullFeed = page.url | build({ 'feed': 'rss' }) %}
-
-    {# RSS auto discovery #}
-    {% block extraHead %}
-      <link rel="alternate" type="application/rss+xml" title="{{ page.title | e }}" href="{{ filteredFeed or fullFeed }}" />
-    {% endblock %}
-
-    {% if filteredFeed != fullFeed %}
-      <h4><a href="{{ filteredFeed }}"><img src="/modules/snippets/images/feed-icon-16x16.png" /> {{ __('Filtered RSS Feed') }}</a></h4>
-    {% endif %}
-    <h4><a href="{{ fullFeed }}"><img src="/modules/snippets/images/feed-icon-16x16.png" /> {{ __('Full RSS Feed') }}</a></h4>
-  </div>
-
+  <div class="col-md-8 panel stuff">
   {{ renderEventPreviews(items, page.url) }}
 
   {{ renderPager(pager, here({})) }}
+  </div>
+</div>
+
+
+
+  
+
+
 
   <script type="text/javascript">
     var $eventFilter = $('select#snippets-tag-filter');

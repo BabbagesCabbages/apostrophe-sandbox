@@ -40,11 +40,21 @@
 
 {% macro renderEventPreviews(items, pageUrl) %}
     <a class="apos-control apos-ui apos-button apos-edit-snippet-button" data-new-event href="#"><i class="icon-pencil"></i> New</a>
+
     <br>
 
     {% if items %}
     {% for item in items %}
       {{ renderEventPreview(item, pageUrl) }}
+      {{ aposArea(page, '.stuff', {
+          controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
+          styles: [
+            { value: 'p', label: 'Text' },
+            { value: 'h3', label: 'Title' },
+            { value: 'h5', label: 'Subtitle' }
+          ],
+          lockups: ['left', 'right']
+        }) }}
     {% endfor %}
   {% else %}
     <h4>{{ __('There are no events yet.') }}</h4>
