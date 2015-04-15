@@ -14,10 +14,12 @@
 {% endmacro %}
 
 {% macro renderEvent(item, pageUrl, options) %}
+
   <div class="apos-event">
     <div class="apos-event-heading">
       <h4>
-        <a href="{{ pageUrl }}/{{ item.slug }}">{{ item.title | e }}</a>      {% if options.edit and item._edit %}
+        <a href="{{ pageUrl }}/{{ item.slug }}">{{ item.title | e }}</a>      
+        {% if options.edit and item._edit %}
           <a class="apos-control apos-ui apos-button apos-edit-snippet-button" data-edit-{{ item.type | css }} data-slug="{{ item.slug }}" href="#"><i class="icon-pencil"></i> Edit</a>
         {% endif %}
       </h4>
@@ -33,20 +35,24 @@
           <a href="{{ pageUrl }}?{{ { tag: tag } | query }}">{{ tag | e }}</a>
         {% endfor %}
       </div>
-    {% endif %}
-{% endmacro %}
 
+    {% endif %}
+
+{% endmacro %}
+</div>
 {# ...or use renderEventPreviews to show previews of all items on a page (date and title) #}
 
 {% macro renderEventPreviews(items, pageUrl) %}
-    <a class="apos-control apos-ui apos-button apos-edit-snippet-button" data-new-event href="#"><i class="icon-pencil"></i> New</a>
-
-    <br>
-
+    <div>
+      <a class="apos-control apos-ui apos-button apos-edit-snippet-button" data-new-event href="#">
+        <i class="icon-pencil"></i> New
+      </a>
+    </div>
+    
     {% if items %}
     {% for item in items %}
       {{ renderEventPreview(item, pageUrl) }}
-      {{ aposArea(page, '.stuff', {
+      {{ aposArea(page, 'stuff', {
           controls: ['style', 'bold', 'italic', 'createLink', 'unlink', 'slideshow', 'video'],
           styles: [
             { value: 'p', label: 'Text' },
@@ -62,10 +68,11 @@
 {% endmacro %}
 
 {% macro renderEventPreview(item, pageUrl) %}
-  <div class="apos-event">
-    <div class="apos-event-heading">
+  <div class="">
+
+    <div class="eventsy">
       <h4><a href="{{ pageUrl }}/{{ item.slug }}">{{ item.title | e }}</a></h4>
-      <div class="blog-title-divider"></div>
+      <div class=""></div>
       <h6><date>{{ eventDateRange(item) }}</date></h6>
     </div>
   </div>

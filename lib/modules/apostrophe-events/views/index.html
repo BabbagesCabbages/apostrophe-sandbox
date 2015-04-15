@@ -15,9 +15,9 @@
   {{ page.url | build([ 'year', 'month' ], { year: activeYear, month: activeMonth, tag: query.tag }, changes) }}
 {%- endmacro -%}
 
-{% block mainContent %}
+
 {% block nav %}
- <nav style="margin-bottom:-90px;" class="navbar navbar-inverse">
+ <nav class="navbar navbar-inverse">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
             {% if page.parent.type == 'default' %}
               <a class="subnav-parent" href="{{ page.parent.url }}">← {{ page.parent.title }}</a>
-          {% endif %}
+            {% endif %}
             {% for child in page.children %}
               <li><a href="{{ child.url }}">{{ child.title }}</a></li>
               {% endfor %}
@@ -53,8 +53,10 @@
       </nav>
 {% endblock %}
 
+{% block mainContent %}
+
 {% if defaultView %}
-<h1>{{ __('Upcoming Events') }}</h1>
+<!-- <h1>{{ __('Upcoming Events') }}</h1>
 <a href="{{ here({ year: thisYear, month: thisMonth }) }}">{{ __('Events by Month') }}</a>
 {% else %}
 <a href="{{ here({ year: null, month: null }) }}">{{ __('Upcoming Events') }}</a>
@@ -62,10 +64,10 @@
         <a class="month-previous" {#class="button previous"#} href="{{ here({ year: prevYear, month: prevMonth }) }}">&laquo;</a>
         <span class="month current">{{ (activeYear + '-' + activeMonth + '-01') | date('MMMM YYYY') }}</span>
         <a class="month-next" {#class="button next"#} href="{{ here({ year: nextYear, month: nextMonth }) }}">&raquo;</a>
-      </h2>
+      </h2> -->
 {% endif %}
 {% if allTags.length %}
- <h2>
+<!--  <h2>
         <label for="type-filter">{{ __('Filter') }}</label>
         <select id="snippets-tag-filter" name="type-filter">
           <option value="{{ here({ tag: null }) }}">{{ __('All') }}</option>
@@ -75,67 +77,14 @@
             {% endif %}
           {% endfor %}
         </select>
-      </h2>
+      </h2> -->
     {% endif %}
-<div class="accordion">
-  <ul>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-    <li>
-      <div>
-        <a href="#">
-          <h2>Lorem Ipsum</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-        </a>
-      </div>
-    </li>
-  </ul>
-</div>
 
 
 <div class="row">
-  <div class="col-md-4">
-    
-  </div>
-  <div class="col-md-8 panel stuff">
+  <div class="col-md-12 panel stuff">
+
+
   {{ renderEventPreviews(items, page.url) }}
 
   {{ renderPager(pager, here({})) }}
